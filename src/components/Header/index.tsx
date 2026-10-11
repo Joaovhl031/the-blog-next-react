@@ -1,19 +1,19 @@
-'use client'
-
 import clsx from "clsx";
+import Link from "next/link";
 
-export function Header(){
-  console.log('Header')
+export function Header() {
   return (
-    <h1
+    <header>
+      <h1
         className={clsx(
-          "text-3xl font-bold text-blue-800",
-          "hover:text-blue-200 hover:bg-blue-500",
-          "transition duration-1000",
+          "text-4xl/normal font-extrabold py-8",
+          "sm:text-5xl/normal sm:py-10",
+          "md:text-6xl/normal dm:py-11",
+          "lg:text-7xl/normal lg:py-12"
         )}
-        onClick={() => alert('onClick Header')}
       >
-        Ola de page.tsx
+        <Link href="#">The Blog</Link>
       </h1>
-  )
+    </header>
+  );
 }
