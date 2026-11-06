@@ -7,11 +7,8 @@ import { Suspense } from "react";
 export default async function HomePage() {
   return (
     <>
-      <Suspense fallback={<SpinLoader className="border-slate-900" />}>
+      <Suspense fallback={<SpinLoader className="border-slate-900 min-h-20 mb-16" />}>
         <PostFeatured />
-      </Suspense>
-      
-      <Suspense fallback={<SpinLoader className="border-slate-900" />}>
         <PostsList />
       </Suspense>
     </>
